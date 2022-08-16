@@ -153,53 +153,53 @@ color: #ff5100;
 /* Imagenes del carousel*/
 
   #IMG1{
-    content:url("/Imagenes/tattoo1B.jpg") ;
+    content: url("../Imagenes/tattoo1B.jpg") ;
   }
   #IMG2{
-    content:url("/Imagenes/tattoo2B.jpg") ;
+    content:url("../Imagenes/tattoo2B.jpg") ;
   }
   #IMG3{
-    content:url("/Imagenes/tattoo3B.jpg") ;
+    content:url("../Imagenes/tattoo3B.jpg") ;
   }
   #IMG4{
-    content:url("/Imagenes/tattoo4B.jpg") ;
+    content:url("../Imagenes/tattoo4B.jpg") ;
   }
   #IMG5{
-    content:url("/Imagenes/tattoo5B.jpg") ;
+    content:url("../Imagenes/tattoo5B.jpg") ;
   }
   #IMG6{
-    content:url("/Imagenes/tattoo6B.jpg") ;
+    content:url("../Imagenes/tattoo6B.jpg") ;
   }
   #IMG7{
-    content:url("/Imagenes/tattoo7B.jpg") ;
+    content:url("../Imagenes/tattoo7B.jpg") ;
   }
   #IMG8{
-    content:url("/Imagenes/tattoo8B.jpg") ;
+    content:url("../Imagenes/tattoo8B.jpg") ;
   }
 
 @media (max-width: 575px) { 
   #IMG1{
-    content:url("/Imagenes/tattoo1.jpg") ;
+    content:url("../Imagenes/tattoo1.jpg") ;
   }
   #IMG2{
-    content:url("/Imagenes/tattoo2.jpg") ;
+    content:url("../Imagenes/tattoo2.jpg") ;
   }
   #IMG3{
-    content:url("/Imagenes/tattoo3.jpg") ;
+    content:url("../Imagenes/tattoo3.jpg") ;
   }
   #IMG4{
-    content:url("/Imagenes/tattoo4.jpg") ;
+    content:url("../Imagenes/tattoo4.jpg") ;
   }
   #IMG5{
-    content:url("/Imagenes/tattoo5.jpg") ;
+    content:url("../Imagenes/tattoo5.jpg") ;
   }
   #IMG6{
-    content:url("/Imagenes/tattoo6.jpg") ;
+    content:url("../Imagenes/tattoo6.jpg") ;
   }
   #IMG7{
-    content:url("/Imagenes/tattoo7.jpg") ;
+    content:url("../Imagenes/tattoo7.jpg") ;
   }
   #IMG8{
-    content:url("/Imagenes/tattoo8.jpg") ;
+    content:url("../Imagenes/tattoo8.jpg") ;
   }
 }
