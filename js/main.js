@@ -213,7 +213,7 @@ const dibujarCarrito = ()=>{
     const totalContainer = document.createElement("div");
     totalContainer.className = "total-carrito";
     totalContainer.innerHTML = `<div class= "total"> TOTAL $ ${totalMP}</div>
-    <button class= "btn btn-info finalizar" id="finalizar" onClick= "finalizarCompra()"> FINALIZAR COMPRA </button>`;
+    <button class= "btn btn-info btn-outline-warning finalizar" id="finalizar" onClick= "dibujarFormu()"> FINALIZAR COMPRA </button>`;
     modalCarrito.appendChild(totalContainer);
 } else{
     modalCarrito.classList.remove("cart");
@@ -245,22 +245,39 @@ const removeProduct = (indice)=>{
     dibujarCarrito();
 }
 
-const finalizarCompra = () => {
-    const totalMP = document.getElementsByClassName("total")[0].innerHTML;
-    modalCarrito.innerHTML = "";
-    const compraFinalizada = `<div class="compra-finalizada"><p class="compra-parrafo"> LA COMPRA YA CASI ES TUYO </p>
-    <div class="datos-cliente">
-    <p class=datos-parrafo"> Complete el formulario  bla bla </p>
-    <button class="btn btn-info formulario" id="formulario" onClick="dibujarFormu()">FORMULARIO </button>
-    </div)`
-    modalCarrito.innerHTML= compraFinalizada;
-};
+
+// const finalizarCompra = () => {
+//     const totalMP = document.getElementsByClassName("total")[0].innerHTML;
+//     modalCarrito.innerHTML = "";
+//     const compraFinalizada = `<div class="compra-finalizada"><p class="compra-parrafo"> LA COMPRA YA CASI ES TUYO </p>
+//     <div class="datos-cliente">
+//     <p class=datos-parrafo"> Complete el formulario  bla bla </p>
+//     <button class="btn btn-info formulario" id="formulario" onClick="dibujarFormu()">FORMULARIO </button>
+//     </div)`
+//     modalCarrito.innerHTML= compraFinalizada;
+// };
 
 const dibujarFormu = () => {
     modalCarrito.innerHTML = "";
+    Swal.fire({
+        position: 'top-end',
+        icon: 'warning',
+        title: 'Por favor ingresa datos de contacto',
+                imageUrl: 'Imagenes/logo.jpg',
+                imageWidth: 150,
+                imageHeight: 150,
+                imageAlt: 'logo v-for-vera',
+                textColor:'white',
+                customClass:{
+                    title:'titulo_alerts',
+                    popup:'background_alerts',
+                    },
+        showConfirmButton: false,
+        timer: 8000,
+      })
     const formulario = `
     <div class="container px-5 my-2 ">
-           <h2 class="fw-bolder" id="tituloServicios">Contactanos!</h2>
+           <h2 class="fw-bolder" id="tituloServicios">Datos del Comprador</h2>
             <div class="row gx-5 justify-content-center" >
                 <div class="col-lg-6" id="customer">
                    <form id="contactForm" style="color: rgb(255,81,0)" >
@@ -290,7 +307,20 @@ const mostrarMensaje = () => {
     const nombreCliente = document.getElementById("nombrecito").value;
     const domicilioCliente = document.getElementById("mailcito").value;
     modalCarrito.innerHTML = "";
-    let mensaje = `<div class = "mensaje-final"> gracias ${nombreCliente} por su compra. recibira en ${domicilioCliente} </div>`
+    let mensaje = `<div class = "mensaje-final"> Muchas gracias ${nombreCliente} por su compra. En breve estara recibiendo un correo de confirmacion
+    en: ${domicilioCliente} <br> Por favor ante cualquier consulta contactarse con nosotros en <button onClick="myFunction6()" class="btn btn-info mt-2 mb-2 btn-outline-warning" id="" type="button">Contactar</button></div> </div>`;
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'gracias por su compra </div>',
+                textColor:'white',
+                customClass:{
+                    title:'titulo_alerts',
+                    popup:'background_alerts',
+                    },
+        showConfirmButton: false,
+        timer: 8000,
+      })
 
     //agregar boton de regreso a inicio con limpieza de local storage//
     modalCarrito.innerHTML = mensaje;

@@ -35,6 +35,35 @@ body{
 .nav-link:hover, .nav-link:focus {
 color: #ff5100;
 }
+/*para el market place*/
+
+.cart {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+.car-img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+.producto-carrito{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.producto-details {
+  font-weight: bold;
+}
+.total-carrito {
+  display: flex;
+  justify-content: center;
+}
+.total{
+  color:black;
+  font-size: 1.3rem;
+
+}
 
 /* Para mostrar secciones */
 #tab1{
@@ -45,18 +74,23 @@ color: #ff5100;
 }
 #tab3{
   display: none;
+  margin-top: 2.7em !important;
 }
 #tab4{
   display: none;
+  margin-top: 5em !important;
 }
 #tab5{
   display: none;
+  margin-top: 1em !important;
 }
 #tab6{
   display: none;
+  margin-top: 5em !important;
 }
 #tab7{
   display: none;
+  margin-top: 5.5em !important;
 }
 #tab8{
   display: none;
@@ -115,3 +149,57 @@ color: #ff5100;
     background-color: #212529 !important;
   
   }
+
+/* Imagenes del carousel*/
+
+  #IMG1{
+    content:url("/Imagenes/tattoo1B.jpg") ;
+  }
+  #IMG2{
+    content:url("/Imagenes/tattoo2B.jpg") ;
+  }
+  #IMG3{
+    content:url("/Imagenes/tattoo3B.jpg") ;
+  }
+  #IMG4{
+    content:url("/Imagenes/tattoo4B.jpg") ;
+  }
+  #IMG5{
+    content:url("/Imagenes/tattoo5B.jpg") ;
+  }
+  #IMG6{
+    content:url("/Imagenes/tattoo6B.jpg") ;
+  }
+  #IMG7{
+    content:url("/Imagenes/tattoo7B.jpg") ;
+  }
+  #IMG8{
+    content:url("/Imagenes/tattoo8B.jpg") ;
+  }
+
+@media (max-width: 575px) { 
+  #IMG1{
+    content:url("/Imagenes/tattoo1.jpg") ;
+  }
+  #IMG2{
+    content:url("/Imagenes/tattoo2.jpg") ;
+  }
+  #IMG3{
+    content:url("/Imagenes/tattoo3.jpg") ;
+  }
+  #IMG4{
+    content:url("/Imagenes/tattoo4.jpg") ;
+  }
+  #IMG5{
+    content:url("/Imagenes/tattoo5.jpg") ;
+  }
+  #IMG6{
+    content:url("/Imagenes/tattoo6.jpg") ;
+  }
+  #IMG7{
+    content:url("/Imagenes/tattoo7.jpg") ;
+  }
+  #IMG8{
+    content:url("/Imagenes/tattoo8.jpg") ;
+  }
+}

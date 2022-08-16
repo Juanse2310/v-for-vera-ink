@@ -51,14 +51,29 @@
     <div class="carousel slide pt-3" id="mainSlider" data-bs-ride="carousel" style= position:relative>
 
         <div class="carousel-inner">
-            <div class="carousel-item active overflow-hidden" data-bs-interval="3000">
-                <img src="Imagenes/tattoo1B.jpg" alt="" class="img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
+            <div class="carousel-item active overflow-hidden" data-bs-interval="2500">
+                <img id="IMG1" src="" alt="" class="img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="Imagenes/tattoo2B.jpg" alt="" class="img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
+            <div class="carousel-item" data-bs-interval="2500">
+                <img id="IMG2" src="" alt="" class="img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
-                <img src="Imagenes/tattoo3B.jpg" alt="" class=" img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
+            <div class="carousel-item" data-bs-interval="2500">
+                <img id="IMG3" src="" alt="" class=" img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img id="IMG4" src="" alt="" class="img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img id="IMG5" src="" alt="" class=" img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img id="IMG6" src="" alt="" class="img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img id="IMG7" src="" alt="" class=" img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+                <img id="IMG8" src="" alt="" class="img-fluid d-block w-100" style = "height:450px ; object-fit: cover; object-position:center; overflow: hidden">
             </div>
         </div>
     </div>
@@ -74,7 +89,7 @@
             <div  class="row justify-content-center">
                 <div  class="col-sm">
                     <div class="card w-100 card-border mb-5 mx-5-5 ">
-                        <img src="Imagenes/insumos.jpg" class="card-img-top" alt="..." height="350px">
+                        <img src="Imagenes/presupuestos.jpg" class="card-img-top" alt="..." height="350px">
                         <div class="card-body bg-secondary">
                           <h5 class="card-title">Presupuesto</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -85,7 +100,7 @@
                 </div>
                 <div class="col-sm">
                     <div class="card w-100 card-border mb-5 mx-5-5 ">
-                        <img src="Imagenes/insumos2.jpg" class="card-img-top" alt="..." height="350px">
+                        <img src="Imagenes/insumos.jpg" class="card-img-top" alt="..." height="350px">
                         <div class="card-body bg-secondary">
                           <h5 class="card-title">Insumos</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -96,7 +111,7 @@
                 </div>
                 <div class="col-sm">
                     <div class="card w-100 card-border mb-5 mx-5-5 ">
-                        <img src="Imagenes/insumos.jpg" class="card-img-top" alt="..." height="350px">
+                        <img src="Imagenes/contacto.jpg" class="card-img-top" alt="..." height="350px">
                         <div class="card-body bg-secondary">
                           <h5 class="card-title">Donde estamos</h5>
                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -111,7 +126,7 @@
 
 </div>
 <!-- Presupuesto -->
-<div class="position-relative overflow-hidden p-3 p-md-0 m-0 w-100 " id="tab3">
+<div class="position-relative overflow-hidden pt-5 p-md-5 mt-5 w-100 " id="tab3">
     <section class="bg-secondary text-light py-1" >
         <div class="container px-5 my-2 ">
 
@@ -175,7 +190,7 @@
 </div>  
 
 <!-- Turnos -->
-<div class="position-relative overflow-hidden p-3 p-md-0 m-0 w-100 " id="tab5">
+<div class="position-relative overflow-hidden pt-5 p-md-0 mt-5 w-100 " id="tab5">
     <section class="bg-secondary text-light py-1 mt-5" >
         <div class="container px-10 my-2">
             <div class="mt-5 text-center mb-2">
@@ -198,8 +213,8 @@
                 <div id="campodoc" class="w-100" style="display: none;">
                   <form action="javascript:void(0);" method="POST" id="reserva-edit">
                     <p id="datosturnos"></p>
-                    <input type="text" id="lienzo" placeholder="Juan.Perez@example.com">
-                    <input type="submit" value="Reservar" />
+                    <input  type="text" id="lienzo" placeholder="Juan.Perez@example.com">
+                    <input class="btn btn-info" type="submit" value="Reservar" />
                   </form>
                 </div>
                 <div class="w-100">
@@ -218,7 +233,7 @@
 
 
 <!-- Donde estamos -->
-<div class="position-relative overflow-hidden p-3 p-md-0 m-0 w-100 " id="tab6">
+<div class="position-relative overflow-hidden pt-5 p-md-0 mt-5 w-100 " id="tab6">
     <section class="text-light py-1 border-bottom" style="background-color:black;">
         <div class="container px-5 my-2">
             <div class="text-center mb-3">
@@ -238,7 +253,7 @@
 </div>
 
 <!-- Contacto -->
-<div class="position-relative overflow-hidden p-3 p-md-0 m-0 w-100 " id="tab7">
+<div class="position-relative overflow-hidden pt-5 p-md-0 mt-5 w-100 " id="tab7">
     <section class="bg-secondary text-light py-1" >
         <div class="container px-5 my-2 ">
             <div class="text-center mb-2">
@@ -279,8 +294,11 @@
 </div>
 
 <!-- ofertas -->
-<div class="position-relative overflow-hidden p-3 p-md-0 m-0 w-100 " id="tab8">
+<div class="position-relative overflow-hidden p-3 p-md-0 mt-5 w-100 " id="tab8">
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="row pt-1">
+        <h4 id="tituloServicios" class="text-center pb-3 pt-1">Ofertas!!</h4>
+    </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="cards-wrapper justify-content-center" id="invento">         
@@ -315,15 +333,15 @@
  <footer class="footer py-2 bg-dark" id="tab9">
     <div class="container bg-dark">
         <div class="row align-items-center">
-            <div class="col-lg-4 text-light">Copyright &copy; Your Website 2022</div>
+            <div class="col-lg-4 text-light">Copyright &copy; Todos los derechos reservados //Runa// v-for-vera-ink //  </div>
             <div class="col-lg-4 my-3 my-lg-0">
                 <a class="btn btn-dark btn-outline-warning btn-social mx-2" href="#!" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
-                <a class="btn btn-dark btn-outline-warning btn-social mx-2" href="#!" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a class="btn btn-dark btn-outline-warning btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="bi bi-instagram"></i></a>
+                <a class="btn btn-dark btn-outline-warning btn-social mx-2" href="https://www.facebook.com/photo/?fbid=10220266756834817&set=pb.1105093831.-2207525000.." aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a class="btn btn-dark btn-outline-warning btn-social mx-2" href="https://www.instagram.com/v_for_vera_ink/" aria-label="LinkedIn"><i class="bi bi-instagram"></i></a>
             </div>
             <div class="col-lg-4 text-lg-end">
-                <a class="link-light text-decoration-none me-3" href="#!">Privacy Policy</a>
-                <a class="link-light text-decoration-none" href="#!">Terms of Use</a>
+                <a class="link-light text-decoration-none me-3" href="#!">RUNA</a>
+                <button style="margin: 0 auto;" type="submit" class="btn btn-dark btn-outline-warning btn-social mx-2" id="btnback" value="Volver" onclick="myFunction1();">Volver</button>
             </div>
         </div>
     </div>
