@@ -1,0 +1,117 @@
+body{
+  background-color: black;
+  display: flex;
+  
+}
+
+#tituloServicios{
+  color: rgb(255,81,0,0.7)
+}
+#imaLogo{
+  height: 60px;
+}
+
+.navbar-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 81, 0, 0.70%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  
+}
+.navbar-toggler{
+  border: 1px solid rgb(255,81,0,0.7);
+}
+
+#cuadritos{
+  height: 50px;
+}
+
+#opcionesturnos{
+  display: none;
+}
+
+
+
+.nav-link, .nav-link:focus {
+  color: white;
+}
+.nav-link:hover, .nav-link:focus {
+color: #ff5100;
+}
+
+/* Para mostrar secciones */
+#tab1{
+  display: block;
+}
+#tab2{
+  display: block;
+}
+#tab3{
+  display: none;
+}
+#tab4{
+  display: none;
+}
+#tab5{
+  display: none;
+}
+#tab6{
+  display: none;
+}
+#tab7{
+  display: none;
+}
+#tab8{
+  display: none;
+}
+#tab9{
+  display: block;
+}  
+
+/* invento de propaganda*/
+.cards-wrapper{
+  display: flex;
+}
+.ofert{
+  width: 18rem;
+  height: 12rem;
+  justify-content: space-around;
+}
+.oferts{
+  height: 7rem;
+    
+}
+/*mediaquerys VARIOS */
+@media (max-width: 575px) {
+  #imaLogo {
+    height: 80px;
+
+  }
+  .cards-wrapper{
+    display: block;
+    }
+  .ofert{
+    width: 18rem;
+    height: 12rem;
+    margin-top: 18px;
+  }
+   
+  }
+  /*sweet alert*/
+  .titulo_alerts{
+    color:#ff5100 !important;
+    background-color: #000000c5 !important;
+      
+  }
+  
+  .text_alerts{
+    color:white !important;
+      
+  }
+  
+  .background_alerts{
+    background-color: #000000c5 !important;
+    border: solid 4px #ff5100 !important;
+  
+  }
+  .boton_alerts{
+    background-color: #212529 !important;
+  
+  }
