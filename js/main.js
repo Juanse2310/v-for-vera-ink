@@ -111,11 +111,18 @@ function cargarCliente(){
 
         nuevoContenido.className = "col-lg-6";
         formulario.appendChild(nuevoContenido);
-        Swal.fire(
-            'Gracias por su mensaje!',
-            'Lo estaremos revisando cuanto antes!',
-            'success'
-          )
+        Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Gracias por su mensaje!',
+                html: '<span class="text_alerts">Lo estaremos revisando cuanto antes!</span>',
+                            customClass:{
+                            title:'titulo_alerts',
+                            popup:'background_alerts',
+                            },
+                showConfirmButton: false,
+                timer: 8000,
+              })
     
     }
 }
@@ -404,7 +411,7 @@ var app = new function() {
       self = this;
       document.getElementById('reserva-edit').onsubmit = function() {
         var d = el.value * 1;
-        if (isNaN(d) || d == 0) {
+        if ((d) || d == 0) {
             Swal.fire({
                 title: 'Por favor ingresar E-mail!',
                 html: '<span class="text_alerts">Y avanzamos con la reserva del turno</span>',
@@ -521,3 +528,5 @@ productos.slice(5,8).forEach((producto,indice)=>{
     ofertador3.appendChild(cardferta3);
 
 });
+
+    
