@@ -82,6 +82,7 @@ boton.onclick = () => {
     sessionStorage.ALTURA = altu2;
 };
 
+
 class cliente{
     constructor(nombre,correo,mesaje){
         this.nombre = nombre;
