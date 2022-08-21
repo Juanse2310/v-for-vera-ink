@@ -563,9 +563,37 @@ let contenido = "";
 
 imgGaleria.forEach(objeto => {
   contenido += ` <div class="col-lg-3">
-  <img src=" ${objeto.url}">
+  <img src=" ${objeto.url}" id="Imagen ${objeto.id}" onclick="function imag(){Swal.fire({
+    imageUrl: '${objeto.url}',
+    imageWidth:700,
+    padding: '-5em',
+    confirmButtonText: 'Volver',
+    customClass:{
+        confirmButton:'boton_alerts',
+        title:'titulo_alerts',
+        popup:'background_alerts',
+        },
+  })}; imag();" >
   </div>`
   
 })
+console.log(contenido);
 resultado.innerHTML = contenido;
 })
+
+Swal.fire({
+    title: 'Por favor ingresar E-mail!',
+    html: '<span class="text_alerts">Y avanzamos con la reserva del turno</span>',
+    imageUrl: 'Imagenes/logo.jpg',
+    imageWidth: 200,
+    imageHeight: 200,
+    imageAlt: 'logo v-for-vera',
+    confirmButtonText:"Dale!",
+    textColor:'white',
+    customClass:{
+        confirmButton:'boton_alerts',
+        title:'titulo_alerts',
+        popup:'background_alerts',
+        },
+    
+  });
