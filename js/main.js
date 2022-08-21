@@ -8,6 +8,7 @@ function myFunction1() {
     document.getElementById("tab7").style.display = "none";  
     document.getElementById("tab8").style.display = "none";  
     document.getElementById("tab9").style.display = "block"; 
+    document.getElementById("tab10").style.display = "none"; 
 }
 function myFunction2() {
     document.getElementById("tab1").style.display = "none";
@@ -19,6 +20,7 @@ function myFunction2() {
     document.getElementById("tab7").style.display = "none";   
     document.getElementById("tab8").style.display = "block"; 
     document.getElementById("tab9").style.display = "block";
+    document.getElementById("tab10").style.display = "none"; 
 }
 
 function myFunction3() {
@@ -30,7 +32,8 @@ function myFunction3() {
     document.getElementById("tab6").style.display = "none";
     document.getElementById("tab7").style.display = "none";  
     document.getElementById("tab8").style.display = "none"; 
-    document.getElementById("tab9").style.display = "block";   
+    document.getElementById("tab9").style.display = "block";
+    document.getElementById("tab10").style.display = "none";    
 }
 
 function myFunction4() {
@@ -43,6 +46,7 @@ function myFunction4() {
     document.getElementById("tab7").style.display = "none"; 
     document.getElementById("tab8").style.display = "none"; 
     document.getElementById("tab9").style.display = "block";
+    document.getElementById("tab10").style.display = "none"; 
 }       
 
 function myFunction5() {
@@ -54,7 +58,8 @@ function myFunction5() {
     document.getElementById("tab6").style.display = "block";
     document.getElementById("tab7").style.display = "none";
     document.getElementById("tab8").style.display = "none";   
-    document.getElementById("tab9").style.display = "block"; 
+    document.getElementById("tab9").style.display = "block";
+    document.getElementById("tab10").style.display = "none";  
 }     
 function myFunction6() {
     document.getElementById("tab1").style.display = "none";
@@ -65,8 +70,22 @@ function myFunction6() {
     document.getElementById("tab6").style.display = "none";
     document.getElementById("tab7").style.display = "block";
     document.getElementById("tab8").style.display = "block";  
-    document.getElementById("tab9").style.display = "block";  
+    document.getElementById("tab9").style.display = "block"; 
+    document.getElementById("tab10").style.display = "none";  
 }  
+function myFunction7() {
+    document.getElementById("tab1").style.display = "none";
+    document.getElementById("tab2").style.display = "none";
+    document.getElementById("tab3").style.display = "none";
+    document.getElementById("tab4").style.display = "none";
+    document.getElementById("tab5").style.display = "none";
+    document.getElementById("tab6").style.display = "none";
+    document.getElementById("tab7").style.display = "none";
+    document.getElementById("tab8").style.display = "none";  
+    document.getElementById("tab9").style.display = "block"; 
+    document.getElementById("tab10").style.display = "block"; 
+
+}
 
 let boton = document.getElementById("calculador");
 boton.onclick = () => {
@@ -132,49 +151,49 @@ function cargarCliente(){
 let productos = [
     {
         id: 1,
-        nombre:"Producto 1",
+        nombre:"Maquina std",
         precio: 950,
         imagen: src="./Imagenes/img1.jpeg",
     },
     {
         id: 2,
-        nombre:"Producto 2",
+        nombre:"Punteras",
         precio: 850,
         imagen: "./Imagenes/img2.jpg",
     },
     {
         id: 3,
-        nombre:"Producto 3",
+        nombre:"Fuente digital",
         precio: 750,
         imagen: "./Imagenes/img3.jpeg",
     },
     {
         id: 4,
-        nombre:"Producto 4",
+        nombre:"Gel Transfer",
         precio: 650,
         imagen: "./Imagenes/img4.jpg",
     },
     {
         id: 5,
-        nombre:"Producto 5",
+        nombre:"tintas c/u",
         precio: 550,
         imagen: "./Imagenes/img5.jpeg",
     },
     {
         id: 6,
-        nombre:"Producto 6",
+        nombre:"Balsamo CHERRY",
         precio: 550,
         imagen: "./Imagenes/img6.jpeg",
     },
     {
         id:7,
-        nombre:"Producto 7",
+        nombre:"Fuente 18V",
         precio: 450,
         imagen: "./Imagenes/img7.png",
     },
     {
         id:8,
-        nombre:"Producto 8",
+        nombre:"Kit rotativa",
         precio: 350,
         imagen: "./Imagenes/img8.jpg",
     }
@@ -184,7 +203,7 @@ const contenedor = document.getElementById("container");
 productos.forEach((producto,indice)=>{
     let card = document.createElement("div");
     card.classList.add("card", "col-sm-12", "col-lg-3","bg-secondary", "text-white")
-    let html =`<img src="${producto.imagen}" class="card-img-top" alt="...">
+    let html =`<img src="${producto.imagen}" class="card-img-top MK" alt="...">
     <div class="card-body">
         <h5 class="card-title" id="tituloServicios">${producto.nombre}</h5>
         <p class="card-text"> $ ${producto.precio}</p>
@@ -530,4 +549,23 @@ productos.slice(5,8).forEach((producto,indice)=>{
 
 });
 
-    
+ // GALERIA //   
+
+ fetch('https://tatuajes-b4f09-default-rtdb.firebaseio.com/tatuajes.json')
+
+
+.then( response => response.json())
+.then(imgGaleria => {
+  console.log(imgGaleria);
+
+let resultado = document.getElementById("grillaImg");
+let contenido = "";
+
+imgGaleria.forEach(objeto => {
+  contenido += ` <div class="col-lg-3">
+  <img src=" ${objeto.url}">
+  </div>`
+  
+})
+resultado.innerHTML = contenido;
+})
