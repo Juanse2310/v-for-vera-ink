@@ -94,6 +94,8 @@ boton.onclick = () => {
     let altu2 = parseInt(document.getElementById('ancho').value);
     let colorr = document.getElementById("coloreado");
     let colo3 = parseInt(colorr.options[colorr.selectedIndex].value);
+    let resultadoPresupuestos = document.getElementById("resultadoPresu");
+    resultadoPresupuestos.innerHTML = `<p class="total"> <input type="text" id="resultado"> </p>`
     let suma = `total $ ${((anch1 * altu2) * colo3)}`;
     document.getElementById("resultado").value = suma;
     sessionStorage.setItem("Presupuesto Final" , suma);
@@ -580,20 +582,3 @@ imgGaleria.forEach(objeto => {
 console.log(contenido);
 resultado.innerHTML = contenido;
 })
-
-Swal.fire({
-    title: 'Por favor ingresar E-mail!',
-    html: '<span class="text_alerts">Y avanzamos con la reserva del turno</span>',
-    imageUrl: 'Imagenes/logo.jpg',
-    imageWidth: 200,
-    imageHeight: 200,
-    imageAlt: 'logo v-for-vera',
-    confirmButtonText:"Dale!",
-    textColor:'white',
-    customClass:{
-        confirmButton:'boton_alerts',
-        title:'titulo_alerts',
-        popup:'background_alerts',
-        },
-    
-  });
