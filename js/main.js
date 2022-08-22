@@ -86,6 +86,13 @@ function myFunction7() {
     document.getElementById("tab10").style.display = "block"; 
 
 }
+function borrado(){
+    sessionStorage.clear();
+    document.getElementById('altura').value = "";
+    document.getElementById('ancho').value = "";
+    document.getElementById("coloreado").value = "0";
+
+}
 
 let boton = document.getElementById("calculador");
 boton.onclick = () => {
@@ -95,7 +102,8 @@ boton.onclick = () => {
     let colorr = document.getElementById("coloreado");
     let colo3 = parseInt(colorr.options[colorr.selectedIndex].value);
     let resultadoPresupuestos = document.getElementById("resultadoPresu");
-    resultadoPresupuestos.innerHTML = `<p class="total"> <input type="text" id="resultado"> </p>`
+    resultadoPresupuestos.innerHTML = `<p class="total"> <input type="text" id="resultado"> </p> 
+    <button class="btn btn-info" id="" onClick="borrado();">Borrar </button>`
     let suma = `total $ ${((anch1 * altu2) * colo3)}`;
     document.getElementById("resultado").value = suma;
     sessionStorage.setItem("Presupuesto Final" , suma);
